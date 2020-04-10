@@ -141,6 +141,13 @@ XtY = np.dot(Xt, Y)
 # inverse of XtX
 XtXinv = np.linalg.inv(XtX)
 
-# Yhat = dot product of XtXinv and XtY
-Yhat = np.dot(XtXinv, XtY)
-print("Yhat: ", Yhat)
+# b = dot product of XtXinv and XtY
+b = np.dot(XtXinv, XtY)
+print("b: ", b)
+
+yhat = X.dot(b)
+print("Yhat: ", yhat)
+
+# same:
+yhat2 = np.dot(X, b)
+print("Yhat2: ", yhat2)
